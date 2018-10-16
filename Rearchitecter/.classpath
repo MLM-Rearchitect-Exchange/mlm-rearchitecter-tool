@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="src-test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Annotator"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Exporter"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Recommender"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Transformer"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Common"/>
+	<classpathentry kind="lib" path="/Common/lib/jopt-simple-5.0.3.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Importer"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

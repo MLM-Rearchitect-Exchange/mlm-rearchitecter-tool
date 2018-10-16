@@ -1,0 +1,6 @@
+Model,Best scoring tool,Melanee points,Melanee ranking,Melanee unsupported features,MetaDepth points,MetaDepth ranking,MetaDepth unsupported features,MultEcore points,MultEcore ranking,MultEcore unsupported features
+SecurityPolicy.xmi,Melanee,31,1,No,29,2,No,10,3,Yes
+Agate.xmi,MetaDepth,398,2,No,518,1,No,279,3,No
+CloudML.xmi,MetaDepth,111,2,No,120,1,No,64,3,No
+CloudML-2.0.xmi,MetaDepth,188,2,No,214,1,No,112,3,No
+HAL.xmi,MetaDepth,256,2,No,284,1,No,156,3,No

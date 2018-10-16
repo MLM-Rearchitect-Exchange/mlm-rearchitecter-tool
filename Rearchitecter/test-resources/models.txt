@@ -1,0 +1,5 @@
+SecurityPolicy.ecore
+Agate.ecore
+CloudML.ecore
+CloudML-2.0.ecore
+HAL.ecore

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MultilevelHierarchy:Hierarchy xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MultilevelHierarchy="http://MultilevelHierarchy" xsi:schemaLocation="http://MultilevelHierarchy ../../../Common/MultilevelHierarchy.ecore" name="CloudML">
+  <models name="Top" children="//@models.1">
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="CloudMLElement" isAbstract="true" subTypes="//@models.0/@elements.1">
+      <potency depth="2"/>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="NamedElement" superTypes="//@models.0/@elements.0" isAbstract="true" subTypes="//@models.0/@elements.2 //@models.0/@elements.3 //@models.0/@elements.12">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="name">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Property" superTypes="//@models.0/@elements.1">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="value">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="WithProperties" superTypes="//@models.0/@elements.1" isAbstract="true" subTypes="//@models.0/@elements.4 //@models.0/@elements.5 //@models.0/@elements.6 //@models.0/@elements.7 //@models.0/@elements.10 //@models.0/@elements.11 //@models.0/@elements.13">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Reference" name="properties" target="//@models.0/@elements.2">
+        <potency start="2" end="2"/>
+        <cardinality>
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Resource" superTypes="//@models.0/@elements.3">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="retrievingCommand">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="deployingCommand">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="configurationCommand">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="startCommand">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="stopCommand">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="uploadCommand" target="//@models.0/@elements.14">
+        <potency start="2" end="2"/>
+        <cardinality>
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Provider" superTypes="//@models.0/@elements.3">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="credentials">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="DeploymentModel" superTypes="//@models.0/@elements.3">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Reference" name="providers" target="//@models.0/@elements.5">
+        <potency start="2" end="2"/>
+        <cardinality>
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="artefactTypes" target="//@models.0/@elements.10">
+        <potency depth="2"/>
+        <cardinality>
+          <potency/>
+        </cardinality>
+        <cardinality>
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="nodeTypes" target="//@models.0/@elements.11">
+        <potency depth="2"/>
+        <cardinality>
+          <potency/>
+        </cardinality>
+        <cardinality>
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="bindingTypes" target="//@models.0/@elements.13">
+        <potency depth="2"/>
+        <cardinality>
+          <potency/>
+        </cardinality>
+        <cardinality>
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="ArtefactPort" superTypes="//@models.0/@elements.3" isAbstract="true" subTypes="//@models.0/@elements.8 //@models.0/@elements.9">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="portNumber" type="int">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="isRemote" type="bool">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="ServerPort" superTypes="//@models.0/@elements.7">
+      <potency depth="2"/>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="ClientPort" superTypes="//@models.0/@elements.7">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="isOptional" type="bool">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Artefact" superTypes="//@models.0/@elements.3">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Reference" name="destination" target="//@models.0/@elements.7">
+        <potency depth="2"/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="resource" target="//@models.0/@elements.4">
+        <potency depth="2"/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="destination" target="//@models.0/@elements.11">
+        <potency start="2" end="2"/>
+        <cardinality max="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="provided" target="//@models.0/@elements.8">
+        <potency depth="2"/>
+        <cardinality>
+          <potency/>
+        </cardinality>
+        <cardinality>
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="required" target="//@models.0/@elements.9">
+        <potency depth="2"/>
+        <cardinality>
+          <potency/>
+        </cardinality>
+        <cardinality>
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Node" superTypes="//@models.0/@elements.3">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="minRam" type="int">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="minCore" type="int">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="minDisk" type="int">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="location">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="OS">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="sshKey">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="securityGroup">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="groupName">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="privateKey">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="imageID">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="is64os" type="bool">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="publicAddress">
+        <potency start="2" end="2"/>
+        <cardinality max="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="id">
+        <potency start="2" end="2"/>
+        <cardinality max="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="cloudProvider" target="//@models.0/@elements.5">
+        <potency depth="2"/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Composite" superTypes="//@models.0/@elements.1">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Reference" name="containedArtefacts" target="//@models.0/@elements.10">
+        <potency start="2" end="2"/>
+        <cardinality>
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Binding" superTypes="//@models.0/@elements.3">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Reference" name="clientResource" target="//@models.0/@elements.4">
+        <potency depth="2"/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="serverResource" target="//@models.0/@elements.4">
+        <potency depth="2"/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="client" target="//@models.0/@elements.9">
+        <potency depth="2"/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+        <cardinality max="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="server" target="//@models.0/@elements.8">
+        <potency depth="2"/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+        <cardinality max="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="UploadCommand">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="source">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="target">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <potency depth="2"/>
+  </models>
+  <models name="Bottom" parent="//@models.0"/>
+</MultilevelHierarchy:Hierarchy>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cloudml" nsURI="http://cloudml.net" nsPrefix="net.cloudml">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="CloudMLElement" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true" eSuperTypes="#//CloudMLElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Property" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WithProperties" abstract="true" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//Property" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="#//WithProperties">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="retrievingCommand" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deployingCommand" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="configurationCommand" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startCommand" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopCommand" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uploadCommand" upperBound="-1"
+        eType="#//UploadCommand" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Provider" eSuperTypes="#//WithProperties">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="credentials" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeploymentModel" eSuperTypes="#//WithProperties">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providers" upperBound="-1"
+        eType="#//Provider" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="artefactTypes" upperBound="-1"
+        eType="#//Artefact" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nodeTypes" upperBound="-1"
+        eType="#//Node" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindingTypes" upperBound="-1"
+        eType="#//Binding" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="artefactInstances" upperBound="-1"
+        eType="#//ArtefactInstance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nodeInstances" upperBound="-1"
+        eType="#//NodeInstance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindingInstances" upperBound="-1"
+        eType="#//BindingInstance" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArtefactPort" abstract="true" eSuperTypes="#//WithProperties">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="portNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isRemote" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServerPort" eSuperTypes="#//ArtefactPort"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClientPort" eSuperTypes="#//ArtefactPort">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isOptional" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Artefact" eSuperTypes="#//WithProperties">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="destination" eType="#//ArtefactPort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//Resource"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="provided" upperBound="-1"
+        eType="#//ServerPort" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="required" upperBound="-1"
+        eType="#//ClientPort" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node" eSuperTypes="#//WithProperties">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cloudProvider" lowerBound="1"
+        eType="#//Provider"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minRam" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minCore" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minDisk" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="OS" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sshKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="securityGroup" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="groupName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="privateKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imageID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="is64os" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArtefactPortInstance" eSuperTypes="#//WithProperties">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//ArtefactPort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServerPortInstance" eSuperTypes="#//ArtefactPortInstance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClientPortInstance" eSuperTypes="#//ArtefactPortInstance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ArtefactInstance" eSuperTypes="#//WithProperties">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Artefact"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="destination" eType="#//NodeInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="provided" upperBound="-1"
+        eType="#//ServerPortInstance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="required" upperBound="-1"
+        eType="#//ClientPortInstance" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeInstance" eSuperTypes="#//WithProperties">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="publicAddress" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Composite" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containedArtefacts" upperBound="-1"
+        eType="#//ArtefactInstance" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Binding" eSuperTypes="#//WithProperties">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="client" eType="#//ClientPort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="server" eType="#//ServerPort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="clientResource" eType="#//Resource"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serverResource" eType="#//Resource"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingInstance" eSuperTypes="#//WithProperties">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Binding"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="client" eType="#//ClientPortInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="server" eType="#//ServerPortInstance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UploadCommand">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="target" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MultilevelHierarchy:Hierarchy xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MultilevelHierarchy="http://MultilevelHierarchy" xsi:schemaLocation="http://MultilevelHierarchy ../../../Common/MultilevelHierarchy.ecore" name="HAL">
+  <models name="Top" children="//@models.1">
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="HAL">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Reference" name="connexion" target="//@models.0/@elements.1">
+        <potency start="2" end="2"/>
+        <cardinality max="1" min="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="contents" target="//@models.0/@elements.2">
+        <potency start="2" end="2"/>
+        <cardinality>
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Connexion">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="login">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="password">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Entry" isAbstract="true" subTypes="//@models.0/@elements.3 //@models.0/@elements.6">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Reference" name="autLab" target="//@models.0/@elements.27">
+        <potency start="2" end="2"/>
+        <cardinality max="1" min="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="tampons" target="//@models.0/@elements.33">
+        <potency start="2" end="2"/>
+        <cardinality>
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="MetaArtType" superTypes="//@models.0/@elements.2 //@models.0/@elements.25" isAbstract="true" subTypes="//@models.0/@elements.4 //@models.0/@elements.5">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="domain">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="abstract">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="referenceBiblio" target="//@models.0/@elements.7">
+        <potency depth="2"/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="ArticleRecent" superTypes="//@models.0/@elements.3">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Reference" name="fichiers" target="//@models.0/@elements.38">
+        <potency start="2" end="2"/>
+        <cardinality max="1" min="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="ArticleRetro" superTypes="//@models.0/@elements.3">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="dateRedaction">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="fichiers" target="//@models.0/@elements.34">
+        <potency start="2" end="2"/>
+        <cardinality max="1" min="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Notice" superTypes="//@models.0/@elements.2">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Reference" name="metaArtNotice" target="//@models.0/@elements.26">
+        <potency start="2" end="2"/>
+        <cardinality max="1" min="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="ReferenceBiblioType" isAbstract="true" subTypes="//@models.0/@elements.8 //@models.0/@elements.9 //@models.0/@elements.10 //@models.0/@elements.11 //@models.0/@elements.12 //@models.0/@elements.13 //@models.0/@elements.14">
+      <potency depth="2"/>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="ArtRevueType" superTypes="//@models.0/@elements.7" isAbstract="true" subTypes="//@models.0/@elements.15 //@models.0/@elements.16">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="urldoi">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="journal">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="volume">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="page">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="annee">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="WorkshopType" superTypes="//@models.0/@elements.7" isAbstract="true" subTypes="//@models.0/@elements.17 //@models.0/@elements.18 //@models.0/@elements.19">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="urldoi">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="titconf">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="ville">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="pays">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="edcom">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="annee">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="page">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="edsci">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="serie">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="ArtOuvrageType" superTypes="//@models.0/@elements.7" isAbstract="true" subTypes="//@models.0/@elements.20">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="urldoi">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="titouv">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="edcom">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="annee">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="edsci">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="serie">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="OuvrageType" superTypes="//@models.0/@elements.7" isAbstract="true" subTypes="//@models.0/@elements.21">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="urldoi">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="edcom">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="annee">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="page">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="TheseType" superTypes="//@models.0/@elements.7" isAbstract="true" subTypes="//@models.0/@elements.24">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="orgthe">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="niveau">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="defencedate">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="directeur">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="codirecteur">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="BrevetType" superTypes="//@models.0/@elements.7" isAbstract="true" subTypes="//@models.0/@elements.22">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="datebrevet">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="numbrevet">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="page">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="pays">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="AutreType" superTypes="//@models.0/@elements.7" isAbstract="true" subTypes="//@models.0/@elements.23">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="urldoi">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="annee">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="description">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="ArtRevue" superTypes="//@models.0/@elements.8">
+      <potency depth="2"/>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="ArtJournal" superTypes="//@models.0/@elements.8">
+      <potency depth="2"/>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Workshop" superTypes="//@models.0/@elements.9">
+      <potency depth="2"/>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Communication" superTypes="//@models.0/@elements.9">
+      <potency depth="2"/>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Conference" superTypes="//@models.0/@elements.9">
+      <potency depth="2"/>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="ArtOuvrage" superTypes="//@models.0/@elements.10">
+      <potency depth="2"/>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Ouvrage" superTypes="//@models.0/@elements.11">
+      <potency depth="2"/>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Brevet" superTypes="//@models.0/@elements.13">
+      <potency depth="2"/>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Autre" superTypes="//@models.0/@elements.14">
+      <potency depth="2"/>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="These" superTypes="//@models.0/@elements.12">
+      <potency depth="2"/>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="MetaType" isAbstract="true" subTypes="//@models.0/@elements.3 //@models.0/@elements.26">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="langue">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="title">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="comment">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="refInterne">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="idext">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="isEpj">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="isEpl">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="classification">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="collaboration">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="keyword">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="datevisible">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="financement">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="researchteam">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="MetaArtNoticeType" superTypes="//@models.0/@elements.25">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="domain">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="abstract">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="referenceBiblio" target="//@models.0/@elements.7">
+        <potency start="2" end="2"/>
+        <cardinality max="1" min="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="AutLabType">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Reference" name="auteurs" target="//@models.0/@elements.28">
+        <potency start="2" end="2"/>
+        <cardinality min="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="laboratoires" target="//@models.0/@elements.29">
+        <potency start="2" end="2"/>
+        <cardinality min="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Auteur">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="nom">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="prenom">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="autrePrenom">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="email">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="urlPerso">
+        <potency/>
+        <cardinality max="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="lab" target="//@models.0/@elements.29">
+        <potency start="2" end="2"/>
+        <cardinality max="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Laboratoire">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="id">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="metas" target="//@models.0/@elements.30">
+        <potency start="2" end="2"/>
+        <cardinality max="1" min="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="AbstractMetaLab" isAbstract="true" subTypes="//@models.0/@elements.31">
+      <potency depth="2"/>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="MetaLab" superTypes="//@models.0/@elements.30">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="id">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="AffiliationType">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="institution">
+        <potency/>
+        <cardinality>
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="prive">
+        <potency/>
+        <cardinality>
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="ecole">
+        <potency/>
+        <cardinality>
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="universite">
+        <potency/>
+        <cardinality>
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="TamponType">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="id">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="AbstractDepot" isAbstract="true" subTypes="//@models.0/@elements.35 //@models.0/@elements.36">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="nom">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Depot" superTypes="//@models.0/@elements.34">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="format">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="DepotWeb" superTypes="//@models.0/@elements.34">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="format">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="AbstractDepotType" isAbstract="true" subTypes="//@models.0/@elements.38 //@models.0/@elements.39">
+      <potency depth="2"/>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="DepotsType" superTypes="//@models.0/@elements.37">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Reference" name="depots" target="//@models.0/@elements.34">
+        <potency start="2" end="2"/>
+        <cardinality min="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="WebLink" superTypes="//@models.0/@elements.37">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="identifiant">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="server" target="//@models.0/@elements.40">
+        <potency start="2" end="2"/>
+        <cardinality max="1" min="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="Server">
+      <potency depth="2"/>
+    </elements>
+    <potency depth="2"/>
+  </models>
+  <models name="Bottom" parent="//@models.0"/>
+</MultilevelHierarchy:Hierarchy>

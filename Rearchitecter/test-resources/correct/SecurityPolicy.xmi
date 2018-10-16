@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MultilevelHierarchy:Hierarchy xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MultilevelHierarchy="http://MultilevelHierarchy" xsi:schemaLocation="http://MultilevelHierarchy ../../../Common/MultilevelHierarchy.ecore" name="SecurityPolicy">
+  <models name="Top" children="//@models.1">
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="SecurityPolicy">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Reference" name="policyTypes" target="//@models.0/@elements.1">
+        <potency depth="2"/>
+        <cardinality>
+          <potency/>
+        </cardinality>
+        <cardinality>
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="PolicyType">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="name">
+        <potency end="2"/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+        <cardinality max="1" min="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="ruleTypes" target="//@models.0/@elements.2">
+        <potency depth="2"/>
+        <cardinality min="1">
+          <potency/>
+        </cardinality>
+        <cardinality>
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="elementTypes" target="//@models.0/@elements.3">
+        <potency depth="2"/>
+        <cardinality min="1">
+          <potency/>
+        </cardinality>
+        <cardinality>
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="RuleType">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="name">
+        <potency end="2"/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+        <cardinality max="1" min="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="parameters" target="//@models.0/@elements.3">
+        <potency depth="2"/>
+        <cardinality min="1">
+          <potency/>
+        </cardinality>
+        <cardinality min="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <elements xsi:type="MultilevelHierarchy:Clabject" name="ElementType">
+      <potency depth="2"/>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="name">
+        <potency end="2"/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+        <cardinality max="1" min="1">
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Attribute" name="hierarchy" type="bool">
+        <potency/>
+        <cardinality max="1" min="1">
+          <potency/>
+        </cardinality>
+      </features>
+      <features xsi:type="MultilevelHierarchy:Reference" name="children" target="//@models.0/@elements.3">
+        <potency start="2" end="2"/>
+        <cardinality>
+          <potency start="2" end="2"/>
+        </cardinality>
+      </features>
+    </elements>
+    <potency depth="2"/>
+  </models>
+  <models name="Bottom" parent="//@models.0"/>
+</MultilevelHierarchy:Hierarchy>
