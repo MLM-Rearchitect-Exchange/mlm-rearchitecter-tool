@@ -18,29 +18,41 @@ public abstract class Constants {
 	
 	public static int CONFIDENCE_THRESHOLD = 5;
 
+	public static final String OPTION_HELP = "help";
+	public static final String OPTION_HELP_DESCRIPTION = "Display available parameters and flags";
+	
 	public static final String OPTION_DEBUG = "debug";
+	public static final String OPTION_DEBUG_DESCRIPTION = "Enable verbose output with more detailed information";
 	
 	public static final String OPTION_PATH = "path";
 	private static final String OPTION_PATH_ALT_2 = "uri";
 	public static final List<String> OPTION_LIST_PATH = (List<String>) Arrays.asList(OPTION_PATH, OPTION_PATH_ALT_2);
+	public static final String OPTION_PATH_DESCRIPTION = "Requires a path to the single input file. Cannot be used in combination with the bulk/batch option";
 	
 	public static final String OPTION_BULK = "bulk";
 	private static final String OPTION_BULK_ALT_2 = "batch";
 	public static final List<String> OPTION_LIST_BULK = (List<String>) Arrays.asList(OPTION_BULK, OPTION_BULK_ALT_2);
+	public static final String OPTION_BULK_DESCRIPTION = "Requires a path to the text file with the list of input file names (one per line). Cannot be used in combination with the single path option";
 
 	public static final String OPTION_EXPORT = "export";
 	private static final String OPTION_EXPORT_ALT_2 = "tool";
 	public static final List<String> OPTION_LIST_EXPORT = (List<String>) Arrays.asList(OPTION_EXPORT, OPTION_EXPORT_ALT_2);
+	public static final String OPTION_EXPORT_DESCRIPTION = "Requires the name of the tool (same as the Java class name) to which export. Can be used several times to select several tools";
+	
 	public static final String OPTION_EXPORT_ALL = "exportAll";
 	private static final String OPTION_EXPORT_ALL_ALT_2 = "all";
 	public static final List<String> OPTION_LIST_EXPORT_ALL = (List<String>) Arrays.asList(OPTION_EXPORT_ALL, OPTION_EXPORT_ALL_ALT_2);
+	public static final String OPTION_EXPORT_ALL_DESCRIPTION = "Export to all registered tools";
+	
+	
 	public static final String OPTION_EXPORT_BEST = "exportBest";
 	private static final String OPTION_EXPORT_BEST_ALT_2 = "exportWinner";
 	private static final String OPTION_EXPORT_BEST_ALT_3 = "best";
 	private static final String OPTION_EXPORT_BEST_ALT_4 = "winner";
 	public static final List<String> OPTION_LIST_EXPORT_BEST = (List<String>) Arrays.asList(OPTION_EXPORT_BEST, OPTION_EXPORT_BEST_ALT_2, OPTION_EXPORT_BEST_ALT_3, OPTION_EXPORT_BEST_ALT_4);
-	//TODO Add EAnnotations text
+	public static final String OPTION_EXPORT_BEST_DESCRIPTION = "Export to the most suitable tool, based on the evaluation from the Recommender";
 	
+	//TODO Add EAnnotations text
 
 	static {
 		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("ecore", new EcoreResourceFactoryImpl());

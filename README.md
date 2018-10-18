@@ -37,10 +37,10 @@ How to run the code
 -------------------
 The projects can be run separately, both from Eclipse (Modelling version) and from the command line if they are exported to JARs.
 
-- From Eclipse: Use Run As > Run Configurations... > "Arguments" tab to type the required parameters and flags, separated by spaces
-- From command line: Run the jar by typing `java -jar <module-name>.jar` followed by the required parameters and flags, separated by spaces
+- From Eclipse: Use Run As > Run Configurations... > "Arguments" tab to type the required arguments and flags, separated by spaces
+- From command line: Run the jar by typing `java -jar <module-name>.jar` followed by the required arguments and flags, separated by spaces
 
-To see the list of available parameters and flags, together with a short description, use the `-help` flag.
+To see the list of available arguments and flags, together with a short description, use the `-help` option.
 
 
 How to contribute

@@ -19,13 +19,23 @@ public class Main {
 	public static void main(String[] args) {
 		// Command-line options
 		OptionParser parser = new OptionParser();
-		parser.acceptsAll(Constants.OPTION_LIST_PATH).withRequiredArg();
-		parser.accepts(Constants.OPTION_DEBUG);
-		parser.acceptsAll(Constants.OPTION_LIST_BULK).withRequiredArg();
-		parser.accepts(exporter.Constants.OPTION_ALL);
-		parser.accepts(exporter.Constants.OPTION_TOOLS).withRequiredArg();
+		parser.accepts(Constants.OPTION_HELP, Constants.OPTION_HELP_DESCRIPTION).forHelp();
+		parser.acceptsAll(Constants.OPTION_LIST_PATH, Constants.OPTION_PATH_DESCRIPTION).withRequiredArg();
+		parser.accepts(Constants.OPTION_DEBUG, Constants.OPTION_DEBUG_DESCRIPTION);
+		parser.acceptsAll(Constants.OPTION_LIST_BULK, Constants.OPTION_BULK_DESCRIPTION).withRequiredArg();
+		parser.acceptsAll(Constants.OPTION_LIST_EXPORT_ALL, Constants.OPTION_EXPORT_ALL_DESCRIPTION);
+		parser.accepts(Constants.OPTION_EXPORT, Constants.OPTION_EXPORT_DESCRIPTION).withRequiredArg();
 
 		OptionSet options = parser.parse(args);
+		if (options.has(Constants.OPTION_HELP)) {
+			try {
+				parser.printHelpOn(System.out);
+			} catch (IOException e) {
+				System.err.println("There was an error when trying to display the help");
+			} 
+			return;
+		}
+		
 		common.Constants.DEBUGGING = options.has(Constants.OPTION_DEBUG);
 		if (!Exporter.init()) {
 			System.err.println("Error initialising Exporter");
@@ -33,10 +43,10 @@ public class Main {
 		}
 
 		List<String> tools = null;
-		if (options.has(exporter.Constants.OPTION_ALL)) {
+		if (options.has(Constants.OPTION_EXPORT_ALL)) {
 			Debugger.log("Exporting to all registered tools");
-		} else if (options.has(exporter.Constants.OPTION_TOOLS)) {
-			tools = (List<String>) options.valuesOf(exporter.Constants.OPTION_TOOLS);
+		} else if (options.has(Constants.OPTION_EXPORT)) {
+			tools = (List<String>) options.valuesOf(Constants.OPTION_EXPORT);
 			Debugger.log("Attempting to export to tools:");
 			for (String toolName : tools) {
 				Debugger.log(toolName);
