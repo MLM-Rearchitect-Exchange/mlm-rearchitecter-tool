@@ -35,18 +35,27 @@ Projects and folders
 
 How to run the code
 -------------------
-The projects can be run separately, both from Eclipse and from the command line if they are exported to JARs.
+The projects can be run separately, both from Eclipse (Modelling version) and from the command line if they are exported to JARs.
 
-- From Eclipse: 
+- From Eclipse: Use Run As > Run Configurations... > "Arguments" tab to type the required parameters and flags, separated by spaces
+- From command line: Run the jar by typing `java -jar Exporter.jar` followed by the required parameters and flags, separated by spaces
 
-- From command line: 
-
-...
+To see the list of available parameters and flags, together with a short description, use the `-help` flag.
 
 
 How to contribute
 -----------------
-...
+The next diagram shows an overview of how the modules are connected to each other (note that the Rearchitecter module is the one that encompasses the whole process).
+
+![Rearchitecting Process Overview](/resources/overview.png "Rearchitecting Process Overview")
+
+The parts highlighted in red represent the extension points available for each module. These extensions consist of Java classes, which need to implement the corresponding interface. These interfaces are:
+
+- Annotator: `Heuristic.java`
+- Transformer: `Transformation.java`
+- Importer:`Format.java`
+- Exporter: `Format.java`
+- Recommender: `Concept.java` and `Tool.java`
 
 
 Related publications
