@@ -30,7 +30,7 @@ Projects and folders
 
 - "Rearchitecter": Eclipse Java plugin project that can be exported into a standalone JAR. Encapsulates the whole process of annotating, transforming, recommending and exporting Ecore models.
 
-* NOTE: All the standalone JARs require a copy of the file "MultilevelHierarchy.ecore" inside the "MultilevelHierarchy" project to be in the same folder as them. In order to generate a valid JAR from the projects' source code, use the "Export" option in Eclipse: From the Project Explorer, right-click the project > Export... > Java > Runnable JAR file > Next > Select "Extract required libraries..." > Set the appropriate JAR name and run configuration (after running it at least once) > Finish. Click "OK" in the popup and ignore the warnings at the end.
+> NOTE: All the standalone JARs require a copy of the file "MultilevelHierarchy.ecore" inside the "MultilevelHierarchy" project to be in the same folder as them. In order to generate a valid JAR from the projects' source code, use the "Export" option in Eclipse: From the Project Explorer, right-click the project > Export... > Java > Runnable JAR file > Next > Select "Extract required libraries..." > Set the appropriate JAR name and run configuration (after running it at least once) > Finish. Click "OK" in the popup and ignore the warnings at the end.
 
 
 How to run the code
