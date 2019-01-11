@@ -89,7 +89,8 @@ public class TypeObjectReference extends CopySimple {
 			addCardinality(referenceInstanceEO, referenceInstanceER.getLowerBound(), referenceInstanceER.getUpperBound(), 1);
 			referenceInstanceEO.eSet(common.Constants.referenceEC.getEStructuralFeature("name"), referenceInstanceER.getName());
 			referenceInstanceEO.eSet(common.Constants.referenceEC.getEStructuralFeature("target"), targetInstanceEO);
-			referenceInstanceEO.eSet(common.Constants.referenceEC.getEStructuralFeature("metaType"), referenceTypeEO);
+			EList<EObject> types = (EList<EObject>) referenceInstanceEO.eGet(common.Constants.referenceEC.getEStructuralFeature("types"));
+			types.add(referenceTypeEO);
 
 			// Add to the source (container) clabject and the registry
 			features = (EList<EObject>) sourceInstanceEO.eGet(common.Constants.clabjectEC.getEStructuralFeature("features"));

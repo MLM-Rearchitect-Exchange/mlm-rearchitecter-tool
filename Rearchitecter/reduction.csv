@@ -1,6 +1,6 @@
 Model,Two-level classes,Two-level references,Two-level attributes,Two-level total,Mutilevel classes,Mutilevel references,Mutilevel attributes,Mutilevel total,Reduction for classes (%),Reduction for references (%),Reduction for attributes (%),Reduction for total (%)
 SecurityPolicy.ecore,7,12,7,26,4,5,4,13,43,59,43,50
 Agate.ecore,69,123,81,273,64,118,81,263,8,5,0,4
-CloudML.ecore,21,28,26,75,15,17,26,58,29,40,0,23
-CloudML-2.0.ecore,33,50,44,127,21,40,44,105,37,20,0,18
+CloudML.ecore,21,28,26,75,17,21,26,64,20,25,0,15
+CloudML-2.0.ecore,33,50,44,127,23,41,44,108,31,18,0,15
 HAL.ecore,42,16,72,130,41,15,72,128,3,7,0,2

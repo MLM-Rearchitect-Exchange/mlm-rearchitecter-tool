@@ -61,7 +61,8 @@ public class InheritanceSimple extends CopySimple {
 		        	}
 		        	
 		        	// Link instance to its type
-		        	instEO.eSet(common.Constants.clabjectEC.getEStructuralFeature("metaType"), typeEO);
+		        	EList<EObject> types = (EList<EObject>) instEO.eGet(common.Constants.clabjectEC.getEStructuralFeature("types"));
+		        	types.add(typeEO);
 		        	
 					// Copy type attributes
 			        for (EAttribute ea : ect.getEAttributes()) {
