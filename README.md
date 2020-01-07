@@ -65,6 +65,11 @@ Related publications
 - Fernando Macías, Adrian Rutle and Volker Stolz. "A tool for the convergence of multilevel modelling approaches". 5th International Workshop on Multi-Level Modelling (MULTI 2018). 2018.
 
 
+License
+-------
+This tool is offered under the GNU General Public License, version 3.
+
+
 Acknowledgements
 ----------------
 - JWI (MIT Java Wordnet Interface, `edu.mit.jwi_2.4.0.jar`) by CSAIL: https://projects.csail.mit.edu/jwi/
